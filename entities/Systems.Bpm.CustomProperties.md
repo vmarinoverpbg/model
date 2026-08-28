@@ -226,6 +226,7 @@ Allowed Values (Systems.Bpm.CustomPropertiesRepository.PropertyType Enum Members
 | Number | Number value. Stored as 'N'. <br /> Database Value: 'N' <br /> Model Value: 1 <br /> Domain API Value: 'Number' |
 | Picture | Picture value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 2 <br /> Domain API Value: 'Picture' |
 | Date | Date value. Stored as 'D'. <br /> Database Value: 'D' <br /> Model Value: 3 <br /> Domain API Value: 'Date' |
+| Reference | Reference value. Stored as 'R'. <br /> Database Value: 'R' <br /> Model Value: 4 <br /> Domain API Value: 'Reference' |
 
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
