@@ -17,6 +17,7 @@ Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_
 | - | - | --- |
 |[Active_From](#active_from)|`date` |The date, from which the worker record has become active in the warehouse.|
 |[Active_To](#active_to)|`date` |The date of termination of the activity of the worker in the warehouse. Can be NULL for workers, which are still active and do not have previous terminations.|
+|[Default_Warehouse_Location_Id](#default_warehouse_location_id)|`uniqueidentifier` |Specifies the default warehouse location used by the worker during task execution to temporarily hold goods being collected, moved, or otherwise processed.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the worker is active and can execute new warehouse tasks.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Person_Id](#person_id)|`uniqueidentifier` Readonly|The definition of the person, when the worker is human worker. NULL means that the person is unknown or the worker is non-person.|
@@ -102,6 +103,43 @@ The date of termination of the activity of the worker in the warehouse. Can be N
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|yes|no|
+
+### Default_Warehouse_Location_Id
+
+
+Specifies the default warehouse location used by the worker during task execution to temporarily hold goods being collected, moved, or otherwise processed.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Wms_Warehouse_Locations](Wms_Warehouse_Locations.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Default_Warehouse_Location_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Is_Active
 

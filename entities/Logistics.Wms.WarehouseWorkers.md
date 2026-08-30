@@ -47,6 +47,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [DefaultWarehouseLocation](Logistics.Wms.WarehouseWorkers.md#defaultwarehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable) | Specifies the default warehouse location used by the worker during task execution to temporarily hold goods being collected, moved, or otherwise processed. |
 | [Person](Logistics.Wms.WarehouseWorkers.md#person) | [Persons](General.Contacts.Persons.md) (nullable) | The definition of the person, when the worker is human worker. NULL means that the person is unknown or the worker is non-person. |
 | [User](Logistics.Wms.WarehouseWorkers.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user who is going to work in the selected warehouse |
 | [Warehouse](Logistics.Wms.WarehouseWorkers.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse, where the worker works. |
@@ -172,6 +173,15 @@ Show in UI: **HiddenByDefault**
 
 
 ## Reference Details
+
+### DefaultWarehouseLocation
+
+Specifies the default warehouse location used by the worker during task execution to temporarily hold goods being collected, moved, or otherwise processed.
+
+Type: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Person
 
