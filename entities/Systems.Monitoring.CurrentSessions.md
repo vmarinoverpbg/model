@@ -37,10 +37,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AbsoluteExpirationTime](Systems.Monitoring.CurrentSessions.md#absoluteexpirationtime) | datetime | Absolute expiration time of the session. Not empty if the session is created by a service appllication.`Required` `Filter(ge;le)` `ORD` |
+| [AbsoluteExpirationTime](Systems.Monitoring.CurrentSessions.md#absoluteexpirationtime) | datetime __nullable__ | Absolute expiration time of the session. Not empty if the session is created by a service appllication.`Filter(ge;le)` `ORD` |
 | [Applications](Systems.Monitoring.CurrentSessions.md#applications) | string (64) | A comma separated list of client applications that share this session.`Required` `Filter(eq;like)` `ORD` |
 | [CurrentRequestsCount](Systems.Monitoring.CurrentSessions.md#currentrequestscount) | int32 | The requests count in the time of the request.`Required` `Filter(ge;le)` `ORD` |
 | [Device](Systems.Monitoring.CurrentSessions.md#device) | string (64) | The name of the user's device.`Required` `Filter(eq;like)` `ORD` |
+| [DeviceId](Systems.Monitoring.CurrentSessions.md#deviceid) | string (64) | The device the session was opened from.`Required` `Filter(eq;like)` `ORD` `Introduced in version 27.1.1.24` |
 | [DownloadMB](Systems.Monitoring.CurrentSessions.md#downloadmb) | decimal (12, 3) | The downloaded megabytes at the time of the request.`Required` `Filter(ge;le)` `ORD` |
 | [LastRequestTime](Systems.Monitoring.CurrentSessions.md#lastrequesttime) | datetime | The last request time.`Required` `Filter(ge;le)` `ORD` |
 | [SessionId](Systems.Monitoring.CurrentSessions.md#sessionid) | string (64) | The id of the session.`Required` `Filter(eq)` `Introduced in version 26.1.4.3` |
@@ -54,9 +55,9 @@ Aggregate Tree
 
 ### AbsoluteExpirationTime
 
-Absolute expiration time of the session. Not empty if the session is created by a service appllication.`Required` `Filter(ge;le)` `ORD`
+Absolute expiration time of the session. Not empty if the session is created by a service appllication.`Filter(ge;le)` `ORD`
 
-Type: **datetime**  
+Type: **datetime __nullable__**  
 Category: **System**  
 Supported Filters: **GreaterThanOrLessThan**  
 Supports Order By: **True**  
@@ -86,6 +87,17 @@ Show in UI: **ShownByDefault**
 ### Device
 
 The name of the user's device.`Required` `Filter(eq;like)` `ORD`
+
+Type: **string (64)**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **True**  
+Maximum Length: **64**  
+Show in UI: **ShownByDefault**  
+
+### DeviceId
+
+The device the session was opened from.`Required` `Filter(eq;like)` `ORD` `Introduced in version 27.1.1.24`
 
 Type: **string (64)**  
 Category: **System**  

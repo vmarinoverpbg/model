@@ -179,6 +179,8 @@ Supports Order By: **False**
 Default Value: **False**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`IIF( ( Convert( obj.PropertyType, Int32) == 4), True, obj.LimitToAllowedValues)`
 ### MaskLength
 
 Limits te length of the property value to the specified number of characters. Null means no limitation

@@ -15,6 +15,7 @@ Sessions dynamic management view. Entity: Dmv_Current_Sessions (Introduced in ve
 |[Applications](#applications)|`nvarchar(64)` |A comma separated list of client applications that share this session.|
 |[Current_Requests_Count](#current_requests_count)|`int` |The requests count in the time of the request.|
 |[Device](#device)|`nvarchar(64)` |The name of the user's device.|
+|[Device_Id](#device_id)|`nvarchar(64)` |The device the session was opened from.|
 |[Download_MB](#download_mb)|`decimal(12, 3)` |The downloaded megabytes at the time of the request.|
 |[Last_Request_Time](#last_request_time)|`datetime` |The last request time.|
 |[Session_Id](#session_id)|`nvarchar(64)` |The id of the session.|
@@ -49,7 +50,7 @@ Absolute expiration time of the session. Not empty if the session is created by 
 |Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|datetime|
+|Type|datetime (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -165,6 +166,43 @@ The name of the user's device.
 |Visible|yes|
 
 #### Device - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|yes|
+|Like|None|no|no|
+
+### Device_Id
+
+
+The device the session was opened from.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|64|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|yes|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(64)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Device_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
